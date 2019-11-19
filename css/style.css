@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url(fonts/gotham-book-regular.otf);
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gotham Italic';
+  src: url(fonts/gotham-book-italic.otf);
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url(fonts/gotham-bold.otf);
+  font-weight: bold;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: 'Gotham', 'Arial', 'sans serif'; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.navigation {
+  display: flex;
+  font-size: 0.9em;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+  text-transform: uppercase; }
+  .navigation .logo img {
+    width: 42px; }
+
+.main-content {
+  margin: 2em 1em 1em; }
+  .main-content h1 {
+    font-size: 1.2em;
+    font-weight: normal;
+    width: 80%; }
+
+/*# sourceMappingURL=style.css.map */
