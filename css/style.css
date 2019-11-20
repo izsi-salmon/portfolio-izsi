@@ -18,7 +18,7 @@
   padding: 0; }
 
 html {
-  font-family: 'Gotham', 'Arial', 'sans serif'; }
+  font-family: 'Gotham', 'Verdana', 'sans serif'; }
 
 body {
   font-size: 14px; }
@@ -55,7 +55,7 @@ h2 {
     font-weight: normal;
     width: 80%; }
   .main-content .projects {
-    margin: 2em 1em; }
+    margin: 4em 1em; }
     .main-content .projects .project-block {
       margin-bottom: 5em; }
       .main-content .projects .project-block .project-img-container {
@@ -77,7 +77,7 @@ h2 {
         margin-bottom: 1em; }
         .main-content .projects .project-block .project-text .project-text-details .date-container .date-hr {
           flex: 1;
-          border: 1px solid #A1A1A1; }
+          border: 0.05em solid #A1A1A1; }
         .main-content .projects .project-block .project-text .project-text-details .date-container .date {
           color: #A1A1A1;
           margin: 0 0 0 0.5em; }
@@ -98,43 +98,64 @@ h2 {
           margin-right: 0.7rem; }
         .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
           font-size: 1.3rem; }
+    .main-content .projects .project-block:last-of-type {
+      margin-bottom: 0; }
 
 @media only screen and (min-width: 768px) {
   body {
     font-size: 16px; }
 
-  .navigation .logo img {
-    width: 50px; }
+  h2 {
+    font-size: 2rem; }
 
-  .main-content h1 {
-    font-size: 2em;
-    max-width: 60%; }
-  .main-content .projects .project-block .project-img-container img {
-    max-height: 60vh;
-    max-width: 50vw;
-    margin-bottom: 0; }
-  .main-content .projects .project-block .project-text .project-title {
-    display: inline-block;
-    position: absolute; }
-  .main-content .projects .project-block .project-text .invisible {
-    display: inline-block;
-    position: relative;
-    opacity: 0; }
-  .main-content .projects .project-block::after {
-    content: "";
-    clear: both;
-    display: table; }
-  .main-content .projects .project-block:nth-child(odd) .project-img-container {
-    float: left;
-    margin-right: 1em;
-    text-align: left; }
-  .main-content .projects .project-block:nth-child(odd) .project-text .project-title {
-    transform: translateX(-30%); }
-  .main-content .projects .project-block:nth-child(even) .project-img-container {
-    float: right;
-    margin-left: 1em;
-    text-align: right; }
-  .main-content .projects .project-block:nth-child(even) .project-text .project-title {
-    transform: translateX(30%); } }
+  .navigation {
+    margin: 2em; }
+    .navigation .logo img {
+      width: 50px; }
+
+  .main-content {
+    margin: 4em 2em 2em; }
+    .main-content h1 {
+      font-size: 2em;
+      margin: 3em 0;
+      max-width: 60%; }
+    .main-content .projects {
+      margin: 7em 1em; }
+      .main-content .projects .project-block {
+        margin-bottom: 10em; }
+        .main-content .projects .project-block .project-img-container img {
+          max-height: 60vh;
+          max-width: 50vw;
+          margin-bottom: 0; }
+        .main-content .projects .project-block .project-text .project-title {
+          margin-top: 2em;
+          display: inline-block;
+          position: absolute; }
+        .main-content .projects .project-block .project-text .invisible {
+          display: inline-block;
+          position: relative;
+          opacity: 0; }
+        .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
+          font-size: 1.5rem; }
+      .main-content .projects .project-block::after {
+        content: "";
+        clear: both;
+        display: table; }
+      .main-content .projects .project-block:nth-child(odd) .project-img-container {
+        float: left;
+        margin-right: 2em;
+        text-align: left; }
+      .main-content .projects .project-block:nth-child(odd) .project-text .project-title {
+        transform: translateX(-30%); }
+      .main-content .projects .project-block:nth-child(even) .project-img-container {
+        float: right;
+        margin-left: 2em;
+        text-align: right; }
+      .main-content .projects .project-block:nth-child(even) .project-text .project-title {
+        transform: translateX(30%); }
+      .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container {
+        flex-direction: row-reverse; }
+        .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container .date {
+          margin: 0 0.5em 0 0; } }
 
 /*# sourceMappingURL=style.css.map */

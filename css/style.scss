@@ -22,7 +22,7 @@ $grey: #A1A1A1;
 }
 
 html{
-    font-family: 'Gotham', 'Arial', 'sans serif';
+    font-family: 'Gotham', 'Verdana', 'sans serif';
 }
 
 body{
@@ -70,7 +70,7 @@ h2{
         width: 80%;
     }
     .projects{
-        margin: 2em 1em;
+        margin: 4em 1em;
         .project-block{
             margin-bottom: 5em;
             .project-img-container{
@@ -98,7 +98,7 @@ h2{
                         margin-bottom: 1em;
                         .date-hr{
                            flex: 1;
-                           border: 1px solid $grey;
+                           border: 0.05em solid $grey;
                         }
                         .date{
                             color: $grey;
@@ -130,6 +130,9 @@ h2{
                 }
             }
         }
+        .project-block:last-of-type{
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -139,8 +142,12 @@ h2{
         font-size: 16px;
     }
     
+    h2{
+        font-size: 2rem;
+    }
     
     .navigation{
+        margin: 2em;
         .logo{
             img{
                 width: 50px;
@@ -149,12 +156,16 @@ h2{
     }
     
     .main-content{
+        margin: 4em 2em 2em;
         h1{
             font-size: 2em;
+            margin: 3em 0;
             max-width: 60%;
         }
         .projects{
+            margin: 7em 1em;
             .project-block{
+                margin-bottom: 10em;
                 .project-img-container{
                     img{
                         max-height: 60vh;
@@ -164,6 +175,7 @@ h2{
                 }
                 .project-text{
                     .project-title{
+                        margin-top: 2em;
                         display: inline-block;
                         position: absolute;
                     }
@@ -171,6 +183,13 @@ h2{
                         display: inline-block;
                         position: relative;
                         opacity: 0;
+                    }
+                    .project-text-details{
+                        .view-more-link{
+                            .globe{
+                                font-size: 1.5rem;
+                            }
+                        }
                     }
                 }
             }
@@ -182,7 +201,7 @@ h2{
             .project-block:nth-child(odd){
                 .project-img-container{
                     float: left;
-                    margin-right: 1em;
+                    margin-right: 2em;
                     text-align: left;
                 }
                 .project-text{
@@ -194,12 +213,20 @@ h2{
             .project-block:nth-child(even){
                 .project-img-container{
                     float: right;
-                    margin-left: 1em;
+                    margin-left: 2em;
                     text-align: right;
                 }
                 .project-text{
                     .project-title{
                         transform: translateX(30%);
+                    }
+                    .project-text-details{
+                        .date-container{
+                            flex-direction: row-reverse;
+                            .date{
+                                margin: 0 0.5em 0 0;
+                            }
+                        }
                     }
                 }
             }
