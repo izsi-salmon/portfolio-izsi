@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Gotham';
-  src: url(fonts/gotham-book-regular.otf);
+  src: url(../fonts/gotham-book-regular.otf);
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Gotham Italic';
-  src: url(fonts/gotham-book-italic.otf);
+  src: url(../fonts/gotham-book-italic.otf);
   font-weight: normal;
   font-style: italic; }
 @font-face {
   font-family: 'Gotham Bold';
-  src: url(fonts/gotham-bold.otf);
+  src: url(../fonts/gotham-bold.otf);
   font-weight: bold;
   font-style: normal; }
 * {
@@ -20,13 +20,26 @@
 html {
   font-family: 'Gotham', 'Arial', 'sans serif'; }
 
+body {
+  font-size: 14px; }
+
 a {
   color: inherit;
   text-decoration: none; }
 
+h1 {
+  font-size: 1.7rem; }
+
+h2 {
+  font-size: 1.6rem; }
+
+.project-icon {
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 0.15em 0.13em; }
+
 .navigation {
   display: flex;
-  font-size: 0.9em;
   justify-content: space-between;
   align-items: center;
   margin: 1em;
@@ -37,8 +50,91 @@ a {
 .main-content {
   margin: 2em 1em 1em; }
   .main-content h1 {
-    font-size: 1.2em;
+    margin: 2em 0;
+    font-size: 1.3rem;
     font-weight: normal;
     width: 80%; }
+  .main-content .projects {
+    margin: 2em 1em; }
+    .main-content .projects .project-block {
+      margin-bottom: 5em; }
+      .main-content .projects .project-block .project-img-container {
+        text-align: center; }
+        .main-content .projects .project-block .project-img-container img {
+          max-height: 70vh;
+          max-width: 100%;
+          margin-bottom: 1.7em; }
+      .main-content .projects .project-block .project-text .project-title {
+        display: block;
+        font-family: 'Gotham Bold';
+        margin-bottom: 1em;
+        text-transform: uppercase; }
+      .main-content .projects .project-block .project-text .invisible {
+        display: none; }
+      .main-content .projects .project-block .project-text .project-text-details .date-container {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1em; }
+        .main-content .projects .project-block .project-text .project-text-details .date-container .date-hr {
+          flex: 1;
+          border: 1px solid #A1A1A1; }
+        .main-content .projects .project-block .project-text .project-text-details .date-container .date {
+          color: #A1A1A1;
+          margin: 0 0 0 0.5em; }
+      .main-content .projects .project-block .project-text .project-text-details .project-type {
+        color: #A1A1A1;
+        display: block;
+        font-family: 'Gotham Bold';
+        margin-bottom: 1em;
+        text-transform: uppercase; }
+      .main-content .projects .project-block .project-text .project-text-details p {
+        margin-bottom: 1.2em; }
+      .main-content .projects .project-block .project-text .project-text-details .view-more-link {
+        display: flex;
+        align-items: center;
+        font-family: 'Gotham Bold';
+        margin-bottom: 1rem; }
+        .main-content .projects .project-block .project-text .project-text-details .view-more-link i {
+          margin-right: 0.7rem; }
+        .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
+          font-size: 1.3rem; }
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px; }
+
+  .navigation .logo img {
+    width: 50px; }
+
+  .main-content h1 {
+    font-size: 2em;
+    max-width: 60%; }
+  .main-content .projects .project-block .project-img-container img {
+    max-height: 60vh;
+    max-width: 50vw;
+    margin-bottom: 0; }
+  .main-content .projects .project-block .project-text .project-title {
+    display: inline-block;
+    position: absolute; }
+  .main-content .projects .project-block .project-text .invisible {
+    display: inline-block;
+    position: relative;
+    opacity: 0; }
+  .main-content .projects .project-block::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .main-content .projects .project-block:nth-child(odd) .project-img-container {
+    float: left;
+    margin-right: 1em;
+    text-align: left; }
+  .main-content .projects .project-block:nth-child(odd) .project-text .project-title {
+    transform: translateX(-30%); }
+  .main-content .projects .project-block:nth-child(even) .project-img-container {
+    float: right;
+    margin-left: 1em;
+    text-align: right; }
+  .main-content .projects .project-block:nth-child(even) .project-text .project-title {
+    transform: translateX(30%); } }
 
 /*# sourceMappingURL=style.css.map */
