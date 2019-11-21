@@ -31,7 +31,7 @@ h1 {
   font-size: 1.7rem; }
 
 h2 {
-  font-size: 1.6rem; }
+  font-size: 2rem; }
 
 .project-icon {
   border: 2px solid #000;
@@ -55,9 +55,9 @@ h2 {
     font-weight: normal;
     width: 80%; }
   .main-content .projects {
-    margin: 4em 1em; }
+    margin: 4em 2em; }
     .main-content .projects .project-block {
-      margin-bottom: 5em; }
+      margin-bottom: 7em; }
       .main-content .projects .project-block .project-img-container {
         text-align: center; }
         .main-content .projects .project-block .project-img-container img {
@@ -101,6 +101,12 @@ h2 {
     .main-content .projects .project-block:last-of-type {
       margin-bottom: 0; }
 
+@media only screen and (min-width: 450px) {
+  .main-content h1 {
+    font-size: 1.8em; }
+  .main-content .projects {
+    max-width: 300px;
+    margin: 4em auto; } }
 @media only screen and (min-width: 768px) {
   body {
     font-size: 16px; }
@@ -120,42 +126,50 @@ h2 {
       margin: 3em 0;
       max-width: 60%; }
     .main-content .projects {
-      margin: 7em 1em; }
+      margin: 7em 1em;
+      max-width: none; }
       .main-content .projects .project-block {
+        display: flex;
         margin-bottom: 10em; }
         .main-content .projects .project-block .project-img-container img {
           max-height: 60vh;
           max-width: 50vw;
           margin-bottom: 0; }
-        .main-content .projects .project-block .project-text .project-title {
-          margin-top: 2em;
-          display: inline-block;
-          position: absolute; }
-        .main-content .projects .project-block .project-text .invisible {
-          display: inline-block;
-          position: relative;
-          opacity: 0; }
-        .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
-          font-size: 1.5rem; }
+        .main-content .projects .project-block .project-text {
+          max-width: 350px; }
+          .main-content .projects .project-block .project-text .project-title {
+            margin-top: 2em;
+            display: inline-block;
+            position: absolute; }
+          .main-content .projects .project-block .project-text .invisible {
+            display: inline-block;
+            pointer-events: none;
+            position: relative;
+            opacity: 0; }
+          .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
+            font-size: 1.5rem; }
       .main-content .projects .project-block::after {
         content: "";
         clear: both;
         display: table; }
       .main-content .projects .project-block:nth-child(odd) .project-img-container {
-        float: left;
         margin-right: 2em;
         text-align: left; }
       .main-content .projects .project-block:nth-child(odd) .project-text .project-title {
         transform: translateX(-30%); }
-      .main-content .projects .project-block:nth-child(even) .project-img-container {
-        float: right;
-        margin-left: 2em;
-        text-align: right; }
-      .main-content .projects .project-block:nth-child(even) .project-text .project-title {
-        transform: translateX(30%); }
-      .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container {
+      .main-content .projects .project-block:nth-child(even) {
         flex-direction: row-reverse; }
-        .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container .date {
-          margin: 0 0.5em 0 0; } }
+        .main-content .projects .project-block:nth-child(even) .project-img-container {
+          margin-left: 2em;
+          text-align: right; }
+        .main-content .projects .project-block:nth-child(even) .project-text .project-title {
+          transform: translateX(30%); }
+        .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container {
+          flex-direction: row-reverse; }
+          .main-content .projects .project-block:nth-child(even) .project-text .project-text-details .date-container .date {
+            margin: 0 0.5em 0 0; } }
+@media only screen and (min-width: 1024px) {
+  .main-content h1 {
+    max-width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */
