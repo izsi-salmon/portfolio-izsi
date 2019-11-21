@@ -171,5 +171,16 @@ h2 {
 @media only screen and (min-width: 1024px) {
   .main-content h1 {
     max-width: 50%; } }
+@media only screen and (min-width: 1024px) {
+  .main-content .projects .project-block:nth-child(3n+1) {
+    background-color: red;
+    justify-content: center;
+    margin: 0 auto 10em; }
+    .main-content .projects .project-block:nth-child(3n+1) .project-img-container {
+      text-align: center; }
+  .main-content .projects .project-block:nth-child(3n+2) {
+    background-color: orange; }
+  .main-content .projects .project-block:nth-child(3n) {
+    background-color: yellow; } }
 
 /*# sourceMappingURL=style.css.map */
