@@ -260,6 +260,7 @@ h2{
     
     .main-content{
         h1{
+            margin: 0;
             max-width: 40%;
         }
     }
@@ -299,7 +300,7 @@ h2{
             }
             .project-block:nth-child(odd){
                 .project-img-container{
-                    margin-right: 2em;
+                    margin-right: 0;
                     text-align: left;
                 }
                 .project-text{
@@ -312,7 +313,7 @@ h2{
                 flex-direction: row;
                 .project-img-container{
                     margin-left: 0;
-                    margin-right: 2em;
+                    margin-right: 0;
                     text-align: left;
                 }
                 .project-text{
@@ -334,6 +335,7 @@ h2{
                 justify-content: center;
                 margin: 0 auto 10em;
                 .project-img-container{
+                    padding-right: 2em;
                     transform: translateX(50%);
                     text-align: center;
                 }
@@ -347,6 +349,9 @@ h2{
                 }
             }
             .project-block:nth-child(3n+2){
+                .project-img-container{
+                    padding-right: 2em;
+                }
                 .project-text{
                     .project-title{
                         transform: translateX(-30%);
@@ -359,7 +364,7 @@ h2{
             .project-block:nth-child(3n){
                 flex-direction: row-reverse;
                 .project-img-container{
-                    margin-left: 2em;
+                    padding-left: 2em;
                     text-align: right;
                 }
                 .project-text{
@@ -377,16 +382,15 @@ h2{
                     }
                 }
             }
-            .project-block:hover{
+            .project-block-on:nth-child(1n){
                 .project-text{
                     .project-text-details{
-                        height: auto;
                         opacity: 1;
                         transform: translateX(0);
                     }
                 }
             }
-            .project-block:nth-child(3n+1):hover{
+            .project-block-on:nth-child(3n+1){
                 .project-text{
                     .project-text-details{
                         transform: translateX(calc(60% + 2em));
