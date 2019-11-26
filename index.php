@@ -13,6 +13,7 @@
 ?>
 
 <div class="main-content">
+   
     <h1>Web/UX <strong>designer</strong> and <strong>developer</strong> in Pōneke (Wellington) Aotearoa.</h1>
     
     <?php if($projects): ?>
@@ -28,9 +29,9 @@
                             <div class="date-container"><div class="date-hr"></div><span class="date"><?=$project['year']?></span></div>
                             <span class="project-type"><?=$project['project_type']?></span>
                             <p><?=$project['summary']?></p>
-                            <div><a href="project-single.php?project=<?= $project['id'] ?>" class="view-more-link view-project-container"><i class="fas fa-ellipsis-h project-icon"></i><span>view project</span></a></div>
+                            <div><a href="project-single.php?project=<?= $project['id'] ?>" class="icon-link view-project-container"><i class="fas fa-ellipsis-h project-icon"></i><span>view project</span></a></div>
                             <?php if($project['website_link']): ?>
-                                <div><a href="<?= $project['website_link'] ?>" target="_blank" class="view-more-link view-site-container"><i class="fas fa-globe globe"></i><span>visit site</span></a></div>
+                                <div><a href="<?= $project['website_link'] ?>" target="_blank" class="icon-link view-site-container"><i class="fas fa-globe globe"></i><span>visit site</span></a></div>
                             <?php endif; ?>
                         </div>
                     </div>

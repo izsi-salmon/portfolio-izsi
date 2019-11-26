@@ -48,6 +48,14 @@ h2 {
   .navigation .logo img {
     width: 42px; }
 
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Gotham Bold';
+  margin-bottom: 1rem; }
+  .icon-link i {
+    margin-right: 0.7rem; }
+
 .main-content {
   margin: 2em 1em 1em; }
   .main-content h1 {
@@ -58,7 +66,7 @@ h2 {
   .main-content .projects {
     margin: 4em 2em; }
     .main-content .projects .project-block {
-      margin-bottom: 7em; }
+      margin-bottom: 5em; }
       .main-content .projects .project-block .project-img-container {
         text-align: center; }
         .main-content .projects .project-block .project-img-container img {
@@ -89,17 +97,61 @@ h2 {
         text-transform: uppercase; }
       .main-content .projects .project-block .project-text .project-text-details p {
         margin-bottom: 1.2em; }
-      .main-content .projects .project-block .project-text .project-text-details .view-more-link {
-        display: inline-flex;
-        align-items: center;
-        font-family: 'Gotham Bold';
-        margin-bottom: 1rem; }
-        .main-content .projects .project-block .project-text .project-text-details .view-more-link i {
-          margin-right: 0.7rem; }
-        .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
-          font-size: 1.3rem; }
+      .main-content .projects .project-block .project-text .project-text-details .icon-link .globe {
+        font-size: 1.3rem; }
     .main-content .projects .project-block:last-of-type {
       margin-bottom: 0; }
+
+.project-main-content {
+  margin: 2em 2em 4em; }
+  .project-main-content .images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em; }
+    .project-main-content .images .img-container {
+      text-align: center; }
+      .project-main-content .images .img-container img {
+        align-self: flex-start;
+        margin-bottom: 0.4em;
+        max-height: 70vh;
+        max-width: 50%; }
+    .project-main-content .images .img-container:nth-child(2) {
+      max-width: 55%; }
+      .project-main-content .images .img-container:nth-child(2) img {
+        margin-right: 0.4em;
+        max-width: 100%; }
+    .project-main-content .images .img-container:nth-child(3) {
+      max-width: 45%; }
+      .project-main-content .images .img-container:nth-child(3) img {
+        margin-left: 0.4em;
+        max-width: 100%; }
+  .project-main-content .text h1 {
+    font-family: 'Gotham Bold';
+    margin-bottom: 0.5em;
+    text-transform: uppercase; }
+  .project-main-content .text .date-container {
+    align-items: center;
+    color: #A1A1A1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em; }
+    .project-main-content .text .date-container .date {
+      margin-right: 0.3em; }
+    .project-main-content .text .date-container .date-line {
+      border: 0.05em solid #A1A1A1;
+      width: 1.5em; }
+  .project-main-content .text .project-type {
+    color: #A1A1A1;
+    font-family: 'Gotham Bold';
+    margin-bottom: 1em;
+    text-transform: uppercase; }
+  .project-main-content .text .description {
+    margin-bottom: 1.7em; }
+  .project-main-content .text .icon-link {
+    display: block;
+    margin-bottom: 1em; }
+    .project-main-content .text .icon-link i {
+      font-size: 1.4em; }
 
 @media only screen and (min-width: 450px) {
   .main-content h1 {
@@ -132,7 +184,7 @@ h2 {
         display: flex;
         margin-bottom: 10em; }
         .main-content .projects .project-block .project-img-container img {
-          max-height: 80vh;
+          max-height: 75vh;
           max-width: 50vw;
           margin-bottom: 0; }
         .main-content .projects .project-block .project-text {
@@ -142,14 +194,7 @@ h2 {
             display: inline-block;
             margin-bottom: 3em;
             width: 130%; }
-          .main-content .projects .project-block .project-text .invisible {
-            background-color: rgba(255, 0, 255, 0.2);
-            display: none;
-            pointer-events: none;
-            position: relative;
-            opacity: 0;
-            transform: translateX(0); }
-          .main-content .projects .project-block .project-text .project-text-details .view-more-link .globe {
+          .main-content .projects .project-block .project-text .project-details .icon-link .globe {
             font-size: 1.5rem; }
       .main-content .projects .project-block::after {
         content: "";

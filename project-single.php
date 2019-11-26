@@ -14,23 +14,33 @@
 
 <div class="project-main-content">
     <div class="images">
-        
+        <?php 
+            $thumbnails = glob('images/'. $project['image_directory'] . '/thumbnails/*.jpg');
+            $images = glob('images/'. $project['image_directory'] . '/*.jpg');
+        ?>
+        <?php foreach ($thumbnails as $key => $thumbnail):?>
+            <div class="img-container">
+                <img src="<?= $thumbnail ?>" alt="Mockup of the project, websites are displayed on different device sizes and graphic projects are displayed as photos of printed material.">
+            </div>
+        <?php endforeach; ?>
     </div>
-    <di class="text">
-        <h2><?= $project['title'] ?></h2>
-        <div class="date"><?= $project['year'] ?></div>
+    <div class="text">
+        <h1><?= $project['title'] ?></h1>
+        <div class="date-container">
+            <div class="date"><?= $project['year'] ?></div><div class="date-line"></div>
+        </div>
         <div class="project-type"><?= $project['project_type'] ?></div>
         <div class="description">
             <?= $project['description'] ?>
         </div>
-        <? if($project['website_link'] || $project['documentation_link'] || $project['code_link']): ?>
+        <?php if($project['website_link'] || $project['documentation_link'] || $project['code_link']): ?>
             <div class="links">
-                <?if($project['website_link']): ?> <a href="<?= $project['website_link'] ?>"></a> visit website <? endif; ?>
-                <?if($project['documentation_link']): ?> <a href="<?= $project['documentation_link'] ?>"></a> view the process <? endif; ?>
-                <?if($project['code_link']): ?> <a href="<?= $project['code_link'] ?>"></a> read the code <? endif; ?>
+                <?php if($project['website_link']): ?> <a href="<?= $project['website_link'] ?>" class="icon-link"><i class="fas fa-globe globe"></i><span>visit the site</span></a><?php endif; ?>
+                <?php if($project['documentation_link']): ?> <a href="<?= $project['documentation_link'] ?>" class="icon-link"><i class="far fa-sticky-note"></i><span>view the process</span></a><?php endif; ?>
+                <?php if($project['code_link']): ?> <a href="<?= $project['code_link'] ?>" class="icon-link"><i class="fab fa-github"></i><span>read the code</span></a><?php endif; ?>
             </div>
-        <? endif; ?>
-    </di>
+        <?php endif; ?>
+    </div>
 </div>
 
 <?php require 'footer.php'; ?>
