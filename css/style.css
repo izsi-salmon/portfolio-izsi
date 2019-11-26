@@ -34,6 +34,9 @@ h1 {
 h2 {
   font-size: 2rem; }
 
+p {
+  line-height: 1.4em; }
+
 .project-icon {
   border: 2px solid #000;
   border-radius: 50%;
@@ -64,7 +67,7 @@ h2 {
     font-weight: normal;
     width: 80%; }
   .main-content .projects {
-    margin: 4em 2em; }
+    margin: 4em 2em 2em; }
     .main-content .projects .project-block {
       margin-bottom: 5em; }
       .main-content .projects .project-block .project-img-container {
@@ -155,6 +158,71 @@ h2 {
     .project-main-content .text .text-wrapper .icon-link i {
       font-size: 1.4em; }
 
+.about-navigation {
+  background-color: #E8C3E4;
+  background-color: #F6D6FF;
+  background-color: #efd9e9;
+  margin: 0;
+  padding: 1em 1em 15vh; }
+
+.about-main-content {
+  margin: 0 auto;
+  width: 90%; }
+  .about-main-content .about-header {
+    align-items: center;
+    display: flex;
+    transform: translateY(-50%); }
+    .about-main-content .about-header .profile-photo-container {
+      background-size: contain;
+      border-radius: 50%;
+      height: 30vw;
+      margin-right: 1em;
+      width: 30vw;
+      max-height: 270px;
+      max-width: 270px; }
+      .about-main-content .about-header .profile-photo-container img {
+        border-radius: 50%;
+        height: 100%;
+        object-fit: cover;
+        width: 100%; }
+    .about-main-content .about-header h1 {
+      font-size: 2.3em;
+      font-family: 'Gotham Bold';
+      transform: translateY(20%); }
+  .about-main-content .bio {
+    margin: -1.5em auto;
+    width: 90%; }
+    .about-main-content .bio p {
+      margin-bottom: 1em; }
+
+.medium-p {
+  font-family: gothamThin;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 1em 0; }
+
+.text-small {
+  font-size: 0.7em; }
+
+.contact-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+  margin: 2.5em auto 1.5em auto;
+  width: 40%; }
+
+.contact-links a:link, .contact-links a:visited {
+  color: #777777; }
+
+.contact-links a:hover, .contact-links a:active {
+  color: #999999;
+  transition: color 0.5s; }
+
+.footer {
+  color: #D2B4D1;
+  padding: 0 1em 2em;
+  text-align: center; }
+
 @media only screen and (min-width: 450px) {
   .main-content h1 {
     font-size: 1.8em; }
@@ -238,7 +306,10 @@ h2 {
         max-width: 45%; }
         .project-main-content .images .img-container:nth-child(3) img {
           margin-left: 0.4em;
-          max-width: 100%; } }
+          max-width: 100%; }
+
+  .footer {
+    text-align: right; } }
 @media only screen and (min-width: 1024px) {
   h2 {
     font-size: 3.5rem; }
@@ -268,7 +339,10 @@ h2 {
           font-size: 4em;
           margin-top: 0.5em; }
         .project-main-content .text .text-wrapper .project-type {
-          margin-bottom: 1.5em; } }
+          margin-bottom: 1.5em; }
+
+  .footer {
+    padding: 0 3em 3em; } }
 @media only screen and (min-width: 1400px) {
   h2 {
     font-size: 5rem; }

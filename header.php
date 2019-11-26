@@ -12,7 +12,25 @@
   <title>Izsi Salmon</title>
 </head>
 <body>
-<div class="navigation">
-    <a class="logo" href="index.php"><img src="images/logo-izsi-small.png" alt="Simple text logo: izsi"></a>
-    <a href="about.php">About</a>
-</div>
+
+<?php 
+    
+    $page = basename($_SERVER['PHP_SELF']);
+    
+?>
+
+<?php if($page == 'about.php'): ?>
+
+    <div class="navigation about-navigation">
+        <a class="logo" href="index.php"><img src="images/logo-izsi-small.png" alt="Simple text logo: izsi"></a>
+        <a href="index.php">Work</a>
+    </div>
+
+<?php else: ?>
+   
+    <div class="navigation">
+        <a class="logo" href="index.php"><img src="images/logo-izsi-small.png" alt="Simple text logo: izsi"></a>
+        <a href="about.php">About</a>
+    </div>
+
+<?php endif; ?>
