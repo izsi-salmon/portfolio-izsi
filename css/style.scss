@@ -172,39 +172,41 @@ h2{
         }
     }
     .text{
-        h1{
-            font-family: 'Gotham Bold';
-            margin-bottom: 0.5em;
-            text-transform: uppercase;
-        }
-        .date-container{
-            align-items: center;
-            color: $grey;
-            display: flex;
+        .text-wrapper{
+            h1{
+                font-family: 'Gotham Bold';
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+            }
+            .date-container{
                 align-items: center;
-            margin-bottom: 0.5em;
-            .date{
-                margin-right: 0.3em;
+                color: $grey;
+                display: flex;
+                    align-items: center;
+                margin-bottom: 0.5em;
+                .date{
+                    margin-right: 0.3em;
+                }
+                .date-line{
+                    border: 0.05em solid $grey;
+                    width: 1.5em;
+                }
             }
-            .date-line{
-                border: 0.05em solid $grey;
-                width: 1.5em;
+            .project-type{
+                color: $grey;
+                font-family: 'Gotham Bold';
+                margin-bottom: 1em;
+                text-transform: uppercase;
             }
-        }
-        .project-type{
-            color: $grey;
-            font-family: 'Gotham Bold';
-            margin-bottom: 1em;
-            text-transform: uppercase;
-        }
-        .description{
-            margin-bottom: 1.7em;
-        }
-        .icon-link{
-            display: block;
-            margin-bottom: 1em;
-            i{
-                font-size: 1.4em;
+            .description{
+                margin-bottom: 1.7em;
+            }
+            .icon-link{
+                display: block;
+                margin-bottom: 1em;
+                i{
+                    font-size: 1.4em;
+                }
             }
         }
     }
@@ -323,7 +325,7 @@ h2{
             margin: 0 auto 2em;
             .img-container{
                 img{
-                    max-height: 25vh;
+                    max-height: 30vh;
                     max-width: 55%;
                 }
             }
@@ -359,6 +361,42 @@ h2{
         }
     }
     
+}
+
+@media only screen and (min-width: 1200px){
+    .project-main-content{
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        .images{
+            flex: 50%;
+            margin-bottom: 0;
+            .img-container{
+                img{
+                    max-height: 42vh;
+                }
+            }
+            .img-container:nth-child(2){
+                max-width: 50%;
+            }
+            .img-container:nth-child(3){
+                max-width: 50%;
+            }
+        }
+        .text{
+            flex: 50%;
+            .text-wrapper{
+                max-width: 70%;
+                h1{
+                    font-size: 4em;
+                    margin-top: 0.5em;
+                }
+                .project-type{
+                    margin-bottom: 1.5em;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1400px){

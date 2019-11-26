@@ -127,32 +127,32 @@ h2 {
       .project-main-content .images .img-container:nth-child(3) img {
         margin-left: 0.4em;
         max-width: 100%; }
-  .project-main-content .text h1 {
+  .project-main-content .text .text-wrapper h1 {
     font-family: 'Gotham Bold';
     margin-bottom: 0.5em;
     text-transform: uppercase; }
-  .project-main-content .text .date-container {
+  .project-main-content .text .text-wrapper .date-container {
     align-items: center;
     color: #A1A1A1;
     display: flex;
     align-items: center;
     margin-bottom: 0.5em; }
-    .project-main-content .text .date-container .date {
+    .project-main-content .text .text-wrapper .date-container .date {
       margin-right: 0.3em; }
-    .project-main-content .text .date-container .date-line {
+    .project-main-content .text .text-wrapper .date-container .date-line {
       border: 0.05em solid #A1A1A1;
       width: 1.5em; }
-  .project-main-content .text .project-type {
+  .project-main-content .text .text-wrapper .project-type {
     color: #A1A1A1;
     font-family: 'Gotham Bold';
     margin-bottom: 1em;
     text-transform: uppercase; }
-  .project-main-content .text .description {
+  .project-main-content .text .text-wrapper .description {
     margin-bottom: 1.7em; }
-  .project-main-content .text .icon-link {
+  .project-main-content .text .text-wrapper .icon-link {
     display: block;
     margin-bottom: 1em; }
-    .project-main-content .text .icon-link i {
+    .project-main-content .text .text-wrapper .icon-link i {
       font-size: 1.4em; }
 
 @media only screen and (min-width: 450px) {
@@ -227,7 +227,7 @@ h2 {
     .project-main-content .images {
       margin: 0 auto 2em; }
       .project-main-content .images .img-container img {
-        max-height: 25vh;
+        max-height: 30vh;
         max-width: 55%; }
       .project-main-content .images .img-container:nth-child(2) {
         max-width: 55%; }
@@ -246,6 +246,29 @@ h2 {
   .main-content h1 {
     margin: 0;
     max-width: 40%; } }
+@media only screen and (min-width: 1200px) {
+  .project-main-content {
+    display: flex;
+    margin: 0 auto;
+    width: 90%; }
+    .project-main-content .images {
+      flex: 50%;
+      margin-bottom: 0; }
+      .project-main-content .images .img-container img {
+        max-height: 42vh; }
+      .project-main-content .images .img-container:nth-child(2) {
+        max-width: 50%; }
+      .project-main-content .images .img-container:nth-child(3) {
+        max-width: 50%; }
+    .project-main-content .text {
+      flex: 50%; }
+      .project-main-content .text .text-wrapper {
+        max-width: 70%; }
+        .project-main-content .text .text-wrapper h1 {
+          font-size: 4em;
+          margin-top: 0.5em; }
+        .project-main-content .text .text-wrapper .project-type {
+          margin-bottom: 1.5em; } }
 @media only screen and (min-width: 1400px) {
   h2 {
     font-size: 5rem; }
