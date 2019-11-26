@@ -143,13 +143,15 @@ h2{
     margin: 2em 2em 4em;
     .images{
         display: flex;
-        flex-wrap: wrap;
+            flex-wrap: wrap;
         margin-bottom: 2em;
         .img-container{
             text-align: center;
+            width: 100%;
             img{
-                align-self: flex-start;
-                margin-bottom: 0.4em;
+                align-self: center;
+                display: block;
+                margin: 0 auto 0.4em;
                 max-height: 70vh;
                 max-width: 50%;
             }
@@ -309,6 +311,34 @@ h2{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    
+    .project-main-content{
+        margin: 2em auto 4em;
+        width: 70%;
+        .images{
+            margin: 0 auto 2em;
+            .img-container{
+                img{
+                    max-height: 25vh;
+                    max-width: 55%;
+                }
+            }
+            .img-container:nth-child(2){
+                max-width: 55%;
+                img{
+                    margin-right: 0.4em;
+                    max-width: 100%;
+                }
+            }
+            .img-container:nth-child(3){
+                max-width: 45%;
+                img{
+                    margin-left: 0.4em;
+                    max-width: 100%;
                 }
             }
         }
