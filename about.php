@@ -18,9 +18,9 @@
     </div>
 
     <div class="contact-links">
-        <a href="https://www.linkedin.com/in/izsi-salmon/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/izsi-salmon" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.behance.net/izsi" target="_blank"><i class="fab fa-behance-square"></i></a>
+        <a href="https://www.linkedin.com/in/izsi-salmon/" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/izsi-salmon" target="_blank" class="contact-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.behance.net/izsi" target="_blank" class="contact-link"><i class="fab fa-behance-square"></i></a>
     </div>
     
 </div>

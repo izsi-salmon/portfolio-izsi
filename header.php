@@ -25,6 +25,13 @@
         <a class="logo" href="index.php"><img src="images/logo-izsi-small.png" alt="Simple text logo: izsi"></a>
         <a href="index.php">Work</a>
     </div>
+    
+<?php elseif($page == 'project-single.php'): ?>
+
+    <div class="navigation navigation-no-sticky">
+        <a class="logo" href="index.php"><img src="images/logo-izsi-small.png" alt="Simple text logo: izsi"></a>
+        <a href="about.php">About</a>
+    </div>
 
 <?php else: ?>
    

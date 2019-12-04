@@ -36,9 +36,9 @@
             </div>
             <?php if($project['website_link'] || $project['documentation_link'] || $project['code_link']): ?>
                 <div class="links">
-                    <?php if($project['website_link']): ?> <a href="<?= $project['website_link'] ?>" class="icon-link"><i class="fas fa-globe globe"></i><span>visit the site</span></a><?php endif; ?>
-                    <?php if($project['documentation_link']): ?> <a href="<?= $project['documentation_link'] ?>" class="icon-link"><i class="far fa-sticky-note"></i><span>view the process</span></a><?php endif; ?>
-                    <?php if($project['code_link']): ?> <a href="<?= $project['code_link'] ?>" class="icon-link"><i class="fab fa-github"></i><span>read the code</span></a><?php endif; ?>
+                    <?php if($project['website_link']): ?> <a href="<?= $project['website_link'] ?>" target="_blank" class="icon-link"><i class="fas fa-globe icon-link-icon globe"></i><span>visit the site</span></a><?php endif; ?>
+                    <?php if($project['documentation_link']): ?> <a href="<?= $project['documentation_link'] ?>" target="_blank"  class="icon-link"><i class="far fa-sticky-note icon-link-icon"></i><span>view the process</span></a><?php endif; ?>
+                    <?php if($project['code_link']): ?> <a href="<?= $project['code_link'] ?>" target="_blank"  class="icon-link"><i class="fab fa-github icon-link-icon"></i><span>read the code</span></a><?php endif; ?>
                 </div>
             <?php endif; ?>
         </div>
