@@ -59,11 +59,6 @@ p {
 .navigation-no-sticky {
   position: static; }
 
-@keyframes spin-animation {
-  from {
-    transform: rotateY(0deg); }
-  to {
-    transform: rotateY(360deg); } }
 .about-navigation {
   background-color: #F6D6FF;
   background-color: #efd9e9;
@@ -71,6 +66,11 @@ p {
   padding: 1em 1em 15vh;
   position: static; }
 
+@keyframes spin-animation {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(360deg); } }
 .icon-link {
   display: inline-flex;
   align-items: center;
@@ -79,14 +79,11 @@ p {
   .icon-link i {
     margin-right: 0.7rem;
     transform-style: preserve-3d; }
-  .icon-link span {
-    letter-spacing: normal;
-    transition: letter-spacing 0.6s ease-out; }
   .icon-link .icon-link-icon-spin {
     animation: spin-animation 0.8s ease-in-out; }
 
-.icon-link:hover span {
-  letter-spacing: 1px; }
+.scroll-message {
+  display: none; }
 
 .main-content {
   margin: 4em 1em 1em; }
@@ -139,6 +136,7 @@ p {
     flex-wrap: wrap;
     margin-bottom: 2em; }
     .project-main-content .images .img-container {
+      cursor: pointer;
       text-align: center;
       width: 100%; }
       .project-main-content .images .img-container img {
@@ -178,12 +176,78 @@ p {
     margin-bottom: 1em;
     text-transform: uppercase; }
   .project-main-content .text .text-wrapper .description {
-    margin-bottom: 1.7em; }
+    margin-bottom: 1.5em; }
+    .project-main-content .text .text-wrapper .description p {
+      margin-bottom: 0.7em; }
   .project-main-content .text .text-wrapper .icon-link {
     display: block;
     margin-bottom: 1em; }
     .project-main-content .text .text-wrapper .icon-link i {
       font-size: 1.4em; }
+
+.drop-shadow {
+  background-color: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 3vw;
+  right: 3vw; }
+
+.close-icon img {
+  width: 16px; }
+
+.image-modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  margin: auto; }
+
+_:-ms-lang(x), .image-modal {
+  display: block; }
+
+_:-ms-lang(x), .chevron {
+  position: fixed; }
+
+_:-ms-lang(x), .chevron-left {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+_:-ms-lang(x), .chevron-right {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.image-modal img {
+  max-height: 90%;
+  max-width: 90%; }
+
+_:-ms-lang(x), .image-modal img {
+  max-height: 90vh;
+  max-width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.image-modal .chevron {
+  display: block;
+  cursor: pointer; }
+
+.image-modal img.chevron {
+  max-height: none;
+  max-width: none;
+  width: 15px; }
 
 .about-main-content {
   margin: 0 auto;
@@ -231,7 +295,6 @@ p {
   margin: 2.5em auto 1.5em auto;
   width: 40%; }
   .contact-links .contact-link {
-    border-bottom: 2px solid pink;
     color: #A1A1A1;
     transition: 0.8s; }
 
@@ -347,13 +410,29 @@ p {
 
   .main-content h1 {
     margin: 0;
-    max-width: 40%; } }
+    max-width: 40%; }
+
+  .image-modal img {
+    max-height: 60vw;
+    max-width: 80%; }
+
+  _:-ms-lang(x), .image-modal img {
+    max-height: 90vh;
+    max-width: 80%; }
+
+  .image-modal img.chevron {
+    width: 36px;
+    padding: 0.5em; }
+
+  .close-icon img {
+    width: 25px; } }
 @media only screen and (min-width: 1200px) {
   .about-navigation {
     padding: 2em 2em 20vh; }
 
   .project-main-content {
     display: flex;
+    align-items: center;
     margin: 0 auto;
     width: 90%; }
     .project-main-content .images {
@@ -368,12 +447,13 @@ p {
     .project-main-content .text {
       flex: 50%; }
       .project-main-content .text .text-wrapper {
-        max-width: 70%; }
+        max-width: 90%; }
         .project-main-content .text .text-wrapper h1 {
-          font-size: 4em;
-          margin-top: 0.5em; }
+          font-size: 4em; }
         .project-main-content .text .text-wrapper .project-type {
           margin-bottom: 1.5em; }
+        .project-main-content .text .text-wrapper .description {
+          font-size: 0.9em; }
 
   .about-main-content {
     width: 60%; }
@@ -397,6 +477,19 @@ p {
 @media only screen and (min-width: 1400px) {
   h2 {
     font-size: 5rem; }
+
+  .scroll-message {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 3em;
+    left: 3em;
+    opacity: 0;
+    transition: 0.7s;
+    transform: translateY(-100%); }
+    .scroll-message i {
+      margin-left: 0.4em; }
 
   .main-content {
     margin: 8em 2em 2em; }

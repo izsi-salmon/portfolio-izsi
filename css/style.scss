@@ -76,15 +76,6 @@ p{
     position: static;
 }
 
-@keyframes spin-animation{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
-
 .about-navigation{
 //    background-color: #E8C3E4;
     background-color: $pink;
@@ -92,6 +83,15 @@ p{
     margin: 0;
     padding: 1em 1em 15vh;
     position: static;
+}
+
+@keyframes spin-animation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
 }
 
 .icon-link{
@@ -103,19 +103,23 @@ p{
         margin-right: 0.7rem;
         transform-style: preserve-3d;
     }
-    span{
-        letter-spacing: normal;
-        transition: letter-spacing 0.6s ease-out;
-    }
+//    span{
+//        letter-spacing: normal;
+//        transition: letter-spacing 0.6s ease-out;
+//    }
     .icon-link-icon-spin{
         animation: spin-animation 0.8s ease-in-out;
     }
 }
 
-.icon-link:hover{
-    span{
-        letter-spacing: 1px;
-    }
+//.icon-link:hover{
+//    span{
+//        letter-spacing: 1px;
+//    }
+//}
+
+.scroll-message{
+    display: none;
 }
 
 .main-content{
@@ -189,6 +193,7 @@ p{
             flex-wrap: wrap;
         margin-bottom: 2em;
         .img-container{
+            cursor: pointer;
             text-align: center;
             width: 100%;
             img{
@@ -242,7 +247,10 @@ p{
                 text-transform: uppercase;
             }
             .description{
-                margin-bottom: 1.7em;
+                margin-bottom: 1.5em;
+                p{
+                    margin-bottom: 0.7em;
+                }
             }
             .icon-link{
                 display: block;
@@ -254,6 +262,83 @@ p{
         }
     }
 }
+
+.drop-shadow{
+  background-color: rgba(255,255,255, 1);
+  display: none;
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.close-icon{
+  cursor: pointer;
+  position: absolute;
+    top: 3vw;
+    right: 3vw;
+}
+
+.close-icon img{
+    width: 16px;
+}
+
+.image-modal{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+_:-ms-lang(x), .image-modal{ 
+    display: block;
+}
+
+_:-ms-lang(x), .chevron{
+    position: fixed;
+}
+
+_:-ms-lang(x), .chevron-left{
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+_:-ms-lang(x), .chevron-right{
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-modal img{
+  max-height: 90%;
+  max-width: 90%;
+}
+
+_:-ms-lang(x), .image-modal img {
+    max-height: 90vh;
+    max-width: 80%;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-modal .chevron{
+  display: block;
+  cursor: pointer;
+}
+
+.image-modal img.chevron{
+    max-height: none;
+    max-width: none;
+    width: 15px;
+}
+
 
 .about-main-content{
     margin: 0 auto;
@@ -310,7 +395,6 @@ p{
     margin: 2.5em auto 1.5em auto;
     width: 40%;
     .contact-link{
-        border-bottom: 2px solid pink;
         color: $grey;
         transition: 0.8s;
     }
@@ -498,6 +582,25 @@ p{
         }
     }
     
+    .image-modal img{
+      max-height: 60vw;
+      max-width: 80%;
+    }
+    
+    _:-ms-lang(x), .image-modal img{
+        max-height: 90vh;
+        max-width: 80%;
+    }
+    
+    .image-modal img.chevron{
+      width: 36px;
+      padding: 0.5em;
+    }
+    
+    .close-icon img{
+        width: 25px;
+    }
+    
 }
 
 @media only screen and (min-width: 1200px){
@@ -508,6 +611,7 @@ p{
     
     .project-main-content{
         display: flex;
+        align-items: center;
         margin: 0 auto;
         width: 90%;
         .images{
@@ -528,13 +632,15 @@ p{
         .text{
             flex: 50%;
             .text-wrapper{
-                max-width: 70%;
+                max-width: 90%;
                 h1{
                     font-size: 4em;
-                    margin-top: 0.5em;
                 }
                 .project-type{
                     margin-bottom: 1.5em;
+                }
+                .description{
+                    font-size: 0.9em;
                 }
             }
         }
@@ -574,6 +680,21 @@ p{
     
     h2{
         font-size: 5rem;
+    }
+    
+    .scroll-message{
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        position: fixed;
+            bottom: 3em;
+            left: 3em;
+        opacity: 0;
+        transition: 0.7s;
+        transform: translateY(-100%);
+        i{
+            margin-left: 0.4em;
+        }
     }
     
     .main-content{

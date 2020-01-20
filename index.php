@@ -46,4 +46,8 @@
     
 </div>
 
+<div class="scroll-message" id="scrollMessage">
+    <p>more projects this way</p><i class="fas fa-long-arrow-alt-down"></i>
+</div>
+
 <?php require 'footer.php'; ?>

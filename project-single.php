@@ -20,7 +20,7 @@
         ?>
         <?php foreach ($thumbnails as $key => $thumbnail):?>
             <div class="img-container">
-                <img src="<?= $thumbnail ?>" alt="Mockup of the project, websites are displayed on different device sizes and graphic projects are displayed as photos of printed material.">
+                <img src="<?= $thumbnail ?>" id="<?= $key ?>" class="project-thumbnail" alt="Mockup of the project, websites are displayed on different device sizes and graphic projects are displayed as photos of printed material.">
             </div>
         <?php endforeach; ?>
     </div>
@@ -44,5 +44,26 @@
         </div>
     </div>
 </div>
+
+<!-- MODAL -->
+
+<div class="drop-shadow">
+
+    <div class="close-icon"><img src="images/cross.png" alt="close icon"></div>
+
+    <div class="aligner-top"></div>
+        <div class="image-modal">
+          <div class="chevron"><img src="images/arrow-left.png" class="chevron chevron-left" id="imagePrev" alt="arrow left"></div>
+          <div id="imageContainer"></div>
+          <div class="chevron"><img src="images/arrow-right.png" class="chevron chevron-right" id="imageNext" alt=" arrow right"></div>
+        </div>
+    <div class="aligner-bottom"></div>
+
+</div>
+
+<script>
+    var thumbnailsArray = <?php echo json_encode($thumbnails); ?>;
+    var imagesArray = <?php echo json_encode($images); ?>;
+</script>
 
 <?php require 'footer.php'; ?>
