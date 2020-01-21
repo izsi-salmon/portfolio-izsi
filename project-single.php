@@ -53,9 +53,16 @@
 
     <div class="aligner-top"></div>
         <div class="image-modal">
-          <div class="chevron"><img src="images/arrow-left.png" class="chevron chevron-left" id="imagePrev" alt="arrow left"></div>
-          <div id="imageContainer"></div>
-          <div class="chevron"><img src="images/arrow-right.png" class="chevron chevron-right" id="imageNext" alt=" arrow right"></div>
+          <div class="image-modal-content" id="modalContent">
+              <div id="imageContainer"></div>
+              <div class="modal-thumbnails">
+                  <?php foreach ($thumbnails as $key => $thumbnail):?>
+                      <div class="modal-thumbnail-container">
+                          <img src="<?= $thumbnail ?>" id="<?= $key ?>thumbnail" class="modal-thumbnail" alt="Mockup of the project, websites are displayed on different device sizes and graphic projects are displayed as photos of printed material.">
+                      </div>
+                  <?php endforeach; ?>
+              </div>
+          </div>
         </div>
     <div class="aligner-bottom"></div>
 

@@ -294,24 +294,9 @@ p{
   margin: auto;
 }
 
+// _:-ms-lang(x) = IE only
 _:-ms-lang(x), .image-modal{ 
     display: block;
-}
-
-_:-ms-lang(x), .chevron{
-    position: fixed;
-}
-
-_:-ms-lang(x), .chevron-left{
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-_:-ms-lang(x), .chevron-right{
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .image-modal img{
@@ -328,17 +313,32 @@ _:-ms-lang(x), .image-modal img {
     transform: translate(-50%, -50%);
 }
 
-.image-modal .chevron{
-  display: block;
-  cursor: pointer;
+.modal-thumbnails{
+    display: flex;
+    margin: 0.5em auto 0;
+    width: 90%;
+    .modal-thumbnail-container{
+        width: calc(30vw - 1em);
+        height: calc(30vw - 1em);
+        margin-right: 0.5em;
+        .modal-thumbnail{
+            opacity: 0.3;
+        }
+        .active-image{
+            opacity: 1;
+        }
+        img{
+            object-fit: cover;
+            max-height: none;
+            max-width: none;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .modal-thumbnail-container:last-of-type{
+        margin-right: 0;
+    }
 }
-
-.image-modal img.chevron{
-    max-height: none;
-    max-width: none;
-    width: 15px;
-}
-
 
 .about-main-content{
     margin: 0 auto;
@@ -590,11 +590,6 @@ _:-ms-lang(x), .image-modal img {
     _:-ms-lang(x), .image-modal img{
         max-height: 90vh;
         max-width: 80%;
-    }
-    
-    .image-modal img.chevron{
-      width: 36px;
-      padding: 0.5em;
     }
     
     .close-icon img{
