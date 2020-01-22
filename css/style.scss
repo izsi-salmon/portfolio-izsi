@@ -285,23 +285,50 @@ p{
 }
 
 .image-modal{
-  display: flex;
-    justify-content: space-around;
+    display: flex;
+        justify-content: space-around;
     align-items: center;
-  margin: auto;
-  text-align: center;
-  width: 90%;
-  margin: auto;
+    margin: auto;
+    text-align: center;
+    max-height: 90vh;
+    max-width: 90vw;
+    .image-modal-content{
+        img{
+          max-height: calc(90vh - 30vw - 0.5em);
+          max-width: 90vw;
+        }
+        .modal-thumbnails{
+            display: flex;
+            margin: 0.5em auto 0;
+            .modal-thumbnail-container{
+                height: calc(30vw - 0.33em);
+                width: calc(30vw - 0.33em);
+                margin: 0 0.5em 0 0;
+                .modal-thumbnail{
+                    opacity: 0.3;
+                }
+                .active-image{
+                    opacity: 1;
+                }
+                img{
+                    object-fit: cover;
+                    max-height: none;
+                    max-width: none;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .modal-thumbnail-container:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 // _:-ms-lang(x) = IE only
+
 _:-ms-lang(x), .image-modal{ 
     display: block;
-}
-
-.image-modal img{
-  max-height: 90%;
-  max-width: 90%;
 }
 
 _:-ms-lang(x), .image-modal img {
@@ -313,32 +340,7 @@ _:-ms-lang(x), .image-modal img {
     transform: translate(-50%, -50%);
 }
 
-.modal-thumbnails{
-    display: flex;
-    margin: 0.5em auto 0;
-    width: 90%;
-    .modal-thumbnail-container{
-        width: calc(30vw - 1em);
-        height: calc(30vw - 1em);
-        margin-right: 0.5em;
-        .modal-thumbnail{
-            opacity: 0.3;
-        }
-        .active-image{
-            opacity: 1;
-        }
-        img{
-            object-fit: cover;
-            max-height: none;
-            max-width: none;
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .modal-thumbnail-container:last-of-type{
-        margin-right: 0;
-    }
-}
+
 
 .about-main-content{
     margin: 0 auto;
@@ -548,6 +550,22 @@ _:-ms-lang(x), .image-modal img {
         }
     }
     
+    .image-modal{
+        .image-modal-content{
+            img{
+              max-height: calc(90vh - 24vw - 0.5em);
+              max-width: 90vw;
+            }
+            .modal-thumbnails{
+                justify-content: center;
+                .modal-thumbnail-container{
+                    height: calc(24vw - 0.33em);
+                    width: calc(24vw - 0.33em);;
+                }
+            }
+        }
+    }
+    
     .about-main-content{
         width: 80%;
         .about-header{
@@ -582,9 +600,19 @@ _:-ms-lang(x), .image-modal img {
         }
     }
     
-    .image-modal img{
-      max-height: 60vw;
-      max-width: 80%;
+    .image-modal{
+        .image-modal-content{
+            img{
+              max-height: calc(90vh - 150px - 0.5em);
+              max-width: 90vw;
+            }
+            .modal-thumbnails{
+                .modal-thumbnail-container{
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+        }
     }
     
     _:-ms-lang(x), .image-modal img{
@@ -636,6 +664,28 @@ _:-ms-lang(x), .image-modal img {
                 }
                 .description{
                     font-size: 0.9em;
+                }
+            }
+        }
+    }
+    
+    .image-modal{
+        .image-modal-content{
+            position: relative;
+            img{
+              max-height: 90vh;
+              max-width: calc(90vw - 100px - 1em);
+            }
+            .modal-thumbnails{
+                flex-direction: column;
+                margin-top: 0;
+                position: absolute;
+                    top: 0;
+                    right: calc(-100px - 1em);
+                .modal-thumbnail-container{
+                    height: 100px;
+                    margin: 0 0 0.5em 0;
+                    width: 100px;
                 }
             }
         }
