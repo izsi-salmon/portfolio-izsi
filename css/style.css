@@ -291,8 +291,11 @@ _:-ms-lang(x), .image-modal img {
   margin: 2.5em auto 1.5em auto;
   width: 40%; }
   .contact-links .contact-link {
-    color: #A1A1A1;
+    color: 000;
+    opacity: 0.5;
     transition: 0.8s; }
+  .contact-links .contact-link:hover {
+    opacity: 1; }
 
 .footer {
   color: #D2B4D1;

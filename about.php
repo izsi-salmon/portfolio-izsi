@@ -8,13 +8,11 @@
         <h1>
             Hi,<br> I'm Izsi
         </h1>
-
     </div>
     
     <div class="bio">
-        <p>Kia ora! Currently a web developement and UX design student at Yoobee School of design, with experience in graphic design and photography. Maecenas tortor felis, imperdiet eget posuere et, iaculis et leo. Praesent interdum est dui, a vulputate ex feugiat non. Nam finibus arcu sit amet mauris placerat laoreet. Nunc tempor dui a odio auctor, ac venenatis nibh lacinia. In eleifend nulla vel dolor ultricies, at laoreet orci ultricies. Nam vel lobortis justo.</p>
-        <p>Aliquam erat volutpat. Duis blandit velit eu volutpat volutpat. Duis sagittis, ipsum quis blandit pretium, justo lacus ultrices lorem. </p>
-        <p>izsi.salmon@gmail.com</p>
+        <p>Kia ora! I'm currently working on this bio so I can tell you a bit more about me!</p>
+        <p>Check back here in a couple of days or head over to my linkedin to find out more.</p>
     </div>
 
     <div class="contact-links">

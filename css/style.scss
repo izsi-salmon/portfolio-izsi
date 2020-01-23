@@ -77,7 +77,6 @@ p{
 }
 
 .about-navigation{
-//    background-color: #E8C3E4;
     background-color: $pink;
     background-color: rgb(239,217,233);
     margin: 0;
@@ -103,20 +102,10 @@ p{
         margin-right: 0.7rem;
         transform-style: preserve-3d;
     }
-//    span{
-//        letter-spacing: normal;
-//        transition: letter-spacing 0.6s ease-out;
-//    }
     .icon-link-icon-spin{
         animation: spin-animation 0.8s ease-in-out;
     }
 }
-
-//.icon-link:hover{
-//    span{
-//        letter-spacing: 1px;
-//    }
-//}
 
 .scroll-message{
     display: none;
@@ -397,11 +386,12 @@ _:-ms-lang(x), .image-modal img {
     margin: 2.5em auto 1.5em auto;
     width: 40%;
     .contact-link{
-        color: $grey;
+        color: 000;
+        opacity: 0.5;
         transition: 0.8s;
     }
     .contact-link:hover{
-        
+        opacity: 1;
     }
 }
 
