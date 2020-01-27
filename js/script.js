@@ -19,24 +19,28 @@ var imageContainer = document.getElementById('imageContainer');
 
 // --- SCROLL MESSAGE ---
 
-if(scrollMessage){
+window.onload = function(){
     
-    function showScrollMessage(){
-        if(window.pageYOffset == 0) {
-            scrollMessage.style.opacity = 1;
-            scrollMessage.style.transform = 'translateY(0)';
-        }
-    }
-
-    function hideScrollMessage(){
-        scrollMessage.style.opacity = 0;
-    }
-
-    window.onload = function(){
+    if(scrollMessage){
         setTimeout(showScrollMessage, 4000);
-    };
-    window.onscroll = hideScrollMessage;
+        window.onscroll = hideScrollMessage;
+    }
     
+    if(imageContainer){
+        initModal();
+    }
+    
+};
+
+function showScrollMessage(){
+    if(window.pageYOffset == 0) {
+        scrollMessage.style.opacity = 1;
+        scrollMessage.style.transform = 'translateY(0)';
+    }
+}
+
+function hideScrollMessage(){
+    scrollMessage.style.opacity = 0;
 }
 
 // --- HIDE/SHOW PROJECT DETAILS ---
@@ -188,9 +192,3 @@ function initModal(){
         $('#'+id+'').addClass("active-image");
     });
 }
-
-window.onload = function(){
-    if(imageContainer){
-        initModal();
-    }
-};

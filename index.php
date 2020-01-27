@@ -8,7 +8,6 @@
     } else{
         die('Error fetching, no results.');
     }
-//    $table = $_GET['table'];
     
 ?>
 

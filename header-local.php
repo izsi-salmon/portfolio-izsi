@@ -1,15 +1,6 @@
 <?php
 
-    if(is_dir('vendor')){
-        require 'vendor/autoload.php';
-    } else {
-        require 'vendor/autoload.php';
-    }
-
-    $dotenv = new Dotenv\Dotenv(__DIR__);
-    $dotenv->load();
-
-    require('database/connection.php');
+    require('database/connection-local.php');
 
 ?>
 

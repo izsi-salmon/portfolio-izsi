@@ -5,4 +5,5 @@
   } else{
     die('Connect to database failed, please check your environment files and make sure username, password and table names are correct.');
   }
+
  ?>
