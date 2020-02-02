@@ -32,6 +32,9 @@ h1 {
   font-size: 1.7rem; }
 
 h2 {
+  font-size: 1.7rem; }
+
+h3 {
   font-size: 2rem; }
 
 p {
@@ -60,8 +63,7 @@ p {
   position: static; }
 
 .about-navigation {
-  background-color: #F6D6FF;
-  background-color: #efd9e9;
+  background-color: #DECEAD;
   margin: 0;
   padding: 1em 1em 15vh;
   position: static; }
@@ -87,11 +89,18 @@ p {
 
 .main-content {
   margin: 4em 1em 1em; }
-  .main-content h1 {
-    margin: 2em 0;
-    font-size: 1.3rem;
-    font-weight: normal;
-    width: 80%; }
+  .main-content .index-title {
+    margin: 5em 0 2em 0; }
+    .main-content .index-title h1 {
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Gotham Bold';
+      font-size: 0.9em;
+      margin-bottom: 0.9em;
+      text-transform: uppercase; }
+    .main-content .index-title h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      width: 80%; }
   .main-content .projects {
     margin: 4em 2em 2em; }
     .main-content .projects .project-block {
@@ -303,7 +312,7 @@ _:-ms-lang(x), .image-modal img {
   text-align: center; }
 
 @media only screen and (min-width: 450px) {
-  .main-content h1 {
+  .main-content .index-title h2 {
     font-size: 1.8em; }
   .main-content .projects {
     max-width: 300px;
@@ -312,7 +321,7 @@ _:-ms-lang(x), .image-modal img {
   body {
     font-size: 16px; }
 
-  h2 {
+  h3 {
     font-size: 3rem; }
 
   .navigation {
@@ -326,9 +335,8 @@ _:-ms-lang(x), .image-modal img {
 
   .main-content {
     margin: 6em 2em 2em; }
-    .main-content h1 {
+    .main-content .index-title h2 {
       font-size: 2em;
-      margin: 2em 0;
       max-width: 60%; }
     .main-content .projects {
       margin: 7em 1em;
@@ -413,11 +421,10 @@ _:-ms-lang(x), .image-modal img {
   .footer {
     text-align: right; } }
 @media only screen and (min-width: 1024px) {
-  h2 {
+  h3 {
     font-size: 3.5rem; }
 
-  .main-content h1 {
-    margin: 0;
+  .main-content .index-title h2 {
     max-width: 40%; }
 
   .image-modal .image-modal-content img {
@@ -498,7 +505,7 @@ _:-ms-lang(x), .image-modal img {
   .footer {
     padding: 0 3em 3em; } }
 @media only screen and (min-width: 1400px) {
-  h2 {
+  h3 {
     font-size: 5rem; }
 
   .scroll-message {
@@ -516,10 +523,16 @@ _:-ms-lang(x), .image-modal img {
 
   .main-content {
     margin: 8em 2em 2em; }
-    .main-content h1 {
-      font-size: 2.2em;
-      max-width: 35%;
+    .main-content .index-title {
+      margin: 0;
       position: absolute; }
+      .main-content .index-title h1 {
+        color: #000;
+        font-size: 1em;
+        margin-bottom: 1.2em; }
+      .main-content .index-title h2 {
+        font-size: 2.2em;
+        max-width: 35%; }
     .main-content .projects {
       margin: 0 2em; }
       .main-content .projects .project-block {

@@ -13,7 +13,10 @@
 
 <div class="main-content">
    
-    <h1>Web/UX <strong>designer</strong> and <strong>developer</strong> in Pōneke (Wellington) Aotearoa.</h1>
+   <div class="index-title">
+       <h1>Izsi Salmon</h1>
+       <h2>Web/UX <strong>designer</strong> and <strong>developer</strong> in Pōneke (Wellington) Aotearoa.</h2>
+   </div>
     
     <?php if($projects): ?>
       <div class="projects">
@@ -23,7 +26,7 @@
                         <a href="project-single.php?project=<?= $project['id'] ?>"><img src="images/<?=$project['image_directory']?>/<?=$project['featured_image']?>" alt="project displayed on mock up"></a>
                     </div>
                     <div class="project-text">
-                        <div><a href="project-single.php?project=<?= $project['id'] ?>" class="project-title" id="projectTitle"><h2><?= $project['title']; ?></h2></a></div>
+                        <div><a href="project-single.php?project=<?= $project['id'] ?>" class="project-title" id="projectTitle"><h3><?= $project['title']; ?></h3></a></div>
                         <div class="project-text-details project-text-details-hidden">
                             <div class="date-container"><div class="date-hr"></div><span class="date"><?=$project['year']?></span></div>
                             <span class="project-type"><?=$project['project_type']?></span>

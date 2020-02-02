@@ -1,3 +1,4 @@
+$beige: #DECEAD;
 $grey: #A1A1A1;
 $pink: #F6D6FF;
 
@@ -41,6 +42,10 @@ h1{
 }
 
 h2{
+    font-size: 1.7rem;
+}
+
+h3{
     font-size: 2rem;
 }
 
@@ -77,8 +82,7 @@ p{
 }
 
 .about-navigation{
-    background-color: $pink;
-    background-color: rgb(239,217,233);
+    background-color: $beige;
     margin: 0;
     padding: 1em 1em 15vh;
     position: static;
@@ -113,11 +117,20 @@ p{
 
 .main-content{
     margin: 4em 1em 1em;
-    h1{
-        margin: 2em 0;
-        font-size: 1.3rem;
-        font-weight: normal;
-        width: 80%;
+    .index-title{
+        margin: 5em 0 2em 0;
+        h1{
+            color: rgba(0,0,0,0.7);
+            font-family: 'Gotham Bold';
+            font-size: 0.9em;
+            margin-bottom: 0.9em;
+            text-transform: uppercase;
+        }
+        h2{
+            font-size: 1.3rem;
+            font-weight: normal;
+            width: 80%;
+        }
     }
     .projects{
         margin: 4em 2em 2em;
@@ -403,8 +416,10 @@ _:-ms-lang(x), .image-modal img {
 
 @media only screen and (min-width: 450px){
     .main-content{
-        h1{
-            font-size: 1.8em;
+        .index-title{
+            h2{
+                font-size: 1.8em;
+            }
         }
         .projects{
             max-width: 300px;
@@ -419,7 +434,7 @@ _:-ms-lang(x), .image-modal img {
         font-size: 16px;
     }
     
-    h2{
+    h3{
         font-size: 3rem;
     }
     
@@ -439,10 +454,11 @@ _:-ms-lang(x), .image-modal img {
     
     .main-content{
         margin: 6em 2em 2em;
-        h1{
-            font-size: 2em;
-            margin: 2em 0;
-            max-width: 60%;
+        .index-title{
+            h2{
+                font-size: 2em;
+                max-width: 60%;
+            }
         }
         .projects{
             margin: 7em 1em;
@@ -579,14 +595,15 @@ _:-ms-lang(x), .image-modal img {
 
 @media only screen and (min-width: 1024px){
     
-    h2{
+    h3{
         font-size: 3.5rem;
     }
     
     .main-content{
-        h1{
-            margin: 0;
-            max-width: 40%;
+        .index-title{
+            h2{
+                max-width: 40%;
+            }
         }
     }
     
@@ -713,7 +730,7 @@ _:-ms-lang(x), .image-modal img {
 
 @media only screen and (min-width: 1400px){
     
-    h2{
+    h3{
         font-size: 5rem;
     }
     
@@ -733,11 +750,19 @@ _:-ms-lang(x), .image-modal img {
     }
     
     .main-content{
-        margin: 8em 2em 2em;;
-        h1{
-            font-size: 2.2em;
-            max-width: 35%;
+        margin: 8em 2em 2em;
+        .index-title{
+            margin: 0;
             position: absolute;
+            h1{
+                color: #000;
+                font-size: 1em;
+                margin-bottom: 1.2em;
+            }
+            h2{
+                font-size: 2.2em;
+                max-width: 35%;
+            }
         }
         .projects{
             margin: 0 2em;
