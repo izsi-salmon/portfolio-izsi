@@ -6,3 +6,4 @@
 /projects
 /documents
 /vendor
+database/connection-local.php

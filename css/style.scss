@@ -90,9 +90,11 @@ p{
 
 @keyframes spin-animation{
     from{
+        -ms-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
     to{
+        -ms-transform: rotateY(360deg);
         transform: rotateY(360deg);
     }
 }
@@ -104,6 +106,7 @@ p{
     margin-bottom: 1rem;
     i{
         margin-right: 0.7rem;
+        -ms-transform-style: preserve-3d;
         transform-style: preserve-3d;
     }
     .icon-link-icon-spin{
@@ -339,6 +342,7 @@ _:-ms-lang(x), .image-modal img {
     position: absolute;
         top: 50%;
         left: 50%;
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -350,6 +354,7 @@ _:-ms-lang(x), .image-modal img {
     .about-header{
         align-items: center;
         display: flex;
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         .profile-photo-container{
             background-size: contain;
@@ -369,6 +374,7 @@ _:-ms-lang(x), .image-modal img {
         h1{
             font-size: 2.4em;
             font-family: 'Gotham Bold';
+            -ms-transform: translateY(20%);
             transform: translateY(20%);
         }
     }
@@ -409,7 +415,7 @@ _:-ms-lang(x), .image-modal img {
 }
 
 .footer{
-    color: #D2B4D1;
+    color: #C9BB9D;
     padding: 0 1em 2em;
     text-align: center;
 }
@@ -502,6 +508,7 @@ _:-ms-lang(x), .image-modal img {
                 }
                 .project-text{
                     .project-title{
+                        -ms-transform: translateX(-30%);
                         transform: translateX(-30%);
                     }
                 }
@@ -743,6 +750,7 @@ _:-ms-lang(x), .image-modal img {
             left: 3em;
         opacity: 0;
         transition: 0.7s;
+        -ms-transform: translateY(-100%);
         transform: translateY(-100%);
         i{
             margin-left: 0.4em;
@@ -791,6 +799,7 @@ _:-ms-lang(x), .image-modal img {
                 }
                 .project-text{
                     .project-title{
+                        -ms-transform: translateX(0);
                         transform: translateX(0);
                     }
                 }
@@ -805,6 +814,7 @@ _:-ms-lang(x), .image-modal img {
                 .project-text{
                     text-align: left;
                     .project-title{
+                        -ms-transform: translateX(0);
                         transform: translateX(0);
                     }
                     .project-text-details{
@@ -822,14 +832,17 @@ _:-ms-lang(x), .image-modal img {
                 margin: 0 auto 10em;
                 .project-img-container{
                     padding-right: 2em;
+                    -ms-transform: translateX(50%);
                     transform: translateX(50%);
                     text-align: center;
                 }
                 .project-text{
                     .project-title{
+                        -ms-transform: translateX(calc(30% + 2em));
                         transform: translateX(calc(30% + 2em));
                     }
                     .project-text-details{
+                        -ms-transform: translateX(-40%);
                         transform: translateX(-40%);
                     }
                 }
@@ -840,9 +853,11 @@ _:-ms-lang(x), .image-modal img {
                 }
                 .project-text{
                     .project-title{
+                        -ms-transform: translateX(-30%);
                         transform: translateX(-30%);
                     }
                     .project-text-details{
+                        -ms-transform: translateX(-100%);
                         transform: translateX(-100%);
                     }
                 }
@@ -855,9 +870,11 @@ _:-ms-lang(x), .image-modal img {
                 }
                 .project-text{
                     .project-title{
+                        -ms-transform: translateX(30%);
                         transform: translateX(30%);
                     }
                     .project-text-details{
+                        -ms-transform: translateX(100%);
                         transform: translateX(100%);
                         .date-container{
                             flex-direction: row-reverse;
@@ -872,6 +889,7 @@ _:-ms-lang(x), .image-modal img {
                 .project-text{
                     .project-text-details{
                         opacity: 1;
+                        -ms-transform: translateX(0);
                         transform: translateX(0);
                     }
                 }
@@ -879,6 +897,7 @@ _:-ms-lang(x), .image-modal img {
             .project-block-on:nth-child(3n+1){
                 .project-text{
                     .project-text-details{
+                        -ms-transform: translateX(calc(60% + 2em));
                         transform: translateX(calc(60% + 2em));
                     }
                 }                
